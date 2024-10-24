@@ -11,7 +11,6 @@ html,body{
   box-sizing: border-box;
   font-family:'Montserrat' ;
 }
-
 .menu{
 
   display: flex;
@@ -222,7 +221,7 @@ color: white;
 .headp{
   height: 176px;
 }
-.cart-value{
+ .cart-value{
   position: absolute;
   height: 16px;
   font-size: 15px;
@@ -231,9 +230,9 @@ color: white;
   width:16px;
   background-color: brown;
   top:44px;
-  left: 1143px;
-border-radius: 8px;
-}
+ left: 120px; 
+border-radius: 8px; }
+
 .cart-wrapper{
 padding: 10px 100px;
 }
@@ -266,7 +265,7 @@ cursor: pointer;
 }
 .imag{
   width: 1100px;
-
+margin-bottom: 10px;
 
 
 }
@@ -275,4 +274,31 @@ cursor: pointer;
 }
 .overlay{
   border-radius: 23px;
+}
+@media (max-width:900px){
+  .Produckte{
+    width: 50%;
+    grid-template-columns: 300px  300px;
+    grid-template-rows: 500px 500px 500px 500px 500px ;
+    font-size: 12px;
+  }.child{
+    padding: 0px 0px;
+
+  }
+  .imag {
+    width: 610px;
+    font-size: 8px;
+}
+.cart-value{
+  position: absolute;
+  height: 16px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  width:16px;
+  background-color: brown;
+  top:22px;
+  left: 565px;
+border-radius: 8px;
+}
 }

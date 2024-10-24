@@ -17,7 +17,6 @@ const Menu = () => {
             <Link to='/'>HOME</Link>
             <Link to='/about'>ABOUT</Link>
             <Link to='/products'>PRODUCTS</Link>
-            <Link to='#'>TOP RATED PRODUCTS</Link>
          <Link to='/cart'><img style={{position:"relative"}} width={'50px'} height={'50px'} src={cart} alt="#" /></Link>
          <div className='cart-value'>{items.length}</div>
         </div>
