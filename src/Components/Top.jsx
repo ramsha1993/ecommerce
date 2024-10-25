@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import top from '../assets/top.jpg'
 import prevs from '../assets/prev.png'
 import next from '../assets/next.png'
-import playstation from '../assets/play station.jpg'
-import latop from '../assets/laptop.jpg'
-
+import bn from '../assets/banner-4.png'
+import bann from '../assets/banner-7.png'
+import baner from '../assets/baner-8.jpg'
+import bannner from '../assets/banner-9.jpg'
 const Top = () => {
 const [imge, setimge] = useState(0)
 function prevhandler(){
@@ -22,9 +22,7 @@ function handler(){
  else{return  setimge(imge+1)
 }}
 
-  const images=[latop,playstation,
-top
-  ]
+  const images=[bn,bann,bannner]
 const btn1={
 background:`url(${prevs})`,
 backgroundRepeat:'no-repeat',
@@ -33,13 +31,9 @@ width:'50px',
 border:'none',
 borderRadius:'30px',cursor:'pointer',
 position:'absolute',
+left: '0%',
+top: '120px'
 
-// top:'2px',
-left:'85px',
-top:'1350px'
-// bottom:'-100px'
-// top:'10px'
-// top:'5px'
 }
 const btn2={
   background:`url(${next})`,
@@ -49,22 +43,26 @@ const btn2={
   border:'none',
   borderRadius:'30px',cursor:'pointer',
   position:'absolute',
-  right:'85px',
-  // bottom:'10px'
-top:'1350px'
-  }
+top: '120px',
+right:'0%'  }
   return (
     <div className='top'>
     <h1>Our Top Rated Products</h1>
 <div className='all'>
 <div className='imag'><img src={images[imge]} alt="#" 
-/><div className="overlay">
+/><div className='text' ><h2>Buy Our lastest product </h2>
+ <p>
+ "50% OFF on Our Latest Products! 🎉 Grab the newest arrivals <br />at half the price. Limited time only—shop now and save big!"</p>
+ 
+ </div>
+ <button className='prev' style={btn1} onClick={prevhandler}></button>
+ <button className='next' style={btn2} onClick={handler}></button>
 
+ <div className="overlay">
+ 
 </div>
-
 </div> 
-<button className='prev' style={btn1} onClick={prevhandler}></button>
-  <button className='next' style={btn2} onClick={handler}></button>
+
 </div>
 
 
