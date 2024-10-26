@@ -1,11 +1,17 @@
 import React, { useState } from 'react'
 import prevs from '../assets/prev.png'
+import Home from './Home'
 import next from '../assets/next.png'
 import bn from '../assets/banner-4.png'
 import bann from '../assets/banner-7.png'
-import baner from '../assets/baner-8.jpg'
+
+// import baner from '../assets/baner-8.jpg'
 import bannner from '../assets/banner-9.jpg'
+import { products } from './InProd'
 const Top = () => {
+
+
+
 const [imge, setimge] = useState(0)
 function prevhandler(){
   if(imge==0){
@@ -45,9 +51,10 @@ const btn2={
   position:'absolute',
 top: '120px',
 right:'0%'  }
+
   return (
     <div className='top'>
-    <h1>Our Top Rated Products</h1>
+    {/* <h1>Our Top Rated Products</h1> */}
 <div className='all'>
 <div className='imag'><img src={images[imge]} alt="#" 
 /><div className='text' ><h2>Buy Our lastest product </h2>
@@ -63,9 +70,15 @@ right:'0%'  }
 </div>
 </div> 
 
+
+
 </div>
-
-
+<div className="scroller">
+ {products.map((elem,index)=>(<div  key={index} className="scroll-1">
+   <img src={elem.image} alt="" />
+  </div>))}
+  <Home />
+</div>
     </div>
 
 

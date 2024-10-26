@@ -9,6 +9,7 @@ import Productpage from './Components/Productpage';
 import store from './store/store';
 import Cart from './Components/Cart';
 import InProd from './Components/InProd';
+import Top from './Components/Top';
 function App() {
   return (
  <div className='app' >  
@@ -16,7 +17,7 @@ function App() {
  <Router>
   <Menu />
   <Routes>
-<Route path='/' Component={Home}/> 
+<Route path='/' Component={Top}/> 
 <Route path='/about' Component={About}/>
 <Route path='/products' Component={InProd}/>
 <Route path='/productpage/:productId' Component={Productpage} />

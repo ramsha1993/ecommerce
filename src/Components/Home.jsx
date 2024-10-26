@@ -13,16 +13,14 @@ function Home() {
     backgroundSize:'cover',                // Zooms the image by 129%
   backgroundRepeat: 'no-repeat',          // Prevents the image from repeating
   backgroundPosition: 'center', 
-  zIndex:'1',
+  zIndex:'-1',
   position:'relative'
   }
   
   return (<>
-    <div className='home' >
-      <div className='home-div' style={backgroundStyle}>
-<div style={{zIndex:'-1',backgroundColor:'rgb(0 0 0 0.6)', width:'100%',position:'absolute',right:'0',left:'0',top:'0',bottom:'0'}}>
+    <div className='home' style={backgroundStyle}>
+<div style={{zIndex:'1',backgroundColor:'rgb(0, 0, 0, 0.6)', width:'100%',position:'absolute',right:'0',left:'0',top:'0',bottom:'0'}}>
 
-</div>
 
 
  <div className='inner'>

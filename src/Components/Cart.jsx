@@ -30,7 +30,6 @@ const handleRemove=(elem)=>{
         const localData = JSON.parse(localStorage.getItem('data')) || [];
         const updatedData = localData.filter((item) => item.aa !== elem.aa); // Assuming 'aa' is a unique identifier
         localStorage.setItem('data', JSON.stringify(updatedData));
-    
         setitem(updatedData)
         }
 
@@ -46,14 +45,6 @@ console.log('Error',error)
 }
 
 ,[])
-
-
-   
-
-
-
-
-
 return (
     <>
       <div><h1 style={{ textAlign: 'center' }}>Cart</h1></div>
