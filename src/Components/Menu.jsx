@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'; // Correct relative path
-import cart from '../assets/cart.png'
+import cart from '../assets/cart-2.png'
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 const Menu = () => {
@@ -19,10 +19,10 @@ const Menu = () => {
             <Link to='/products'>PRODUCTS</Link>
             <div className="cart-container">
    <Link to='/cart'>
-      <img
+   <img
          style={{position: "relative"}}
-         width="50px"
-         height="50px"
+         width="40px"
+         height="40px"
          src={cart}
          alt="#"
       />

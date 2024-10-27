@@ -1,7 +1,7 @@
 import React from 'react'
 import '../App.css'
 import banner from '../assets/banner-5.jpg'
-import Top from './Top';
+// import Top from './Top';
 
 
 
@@ -33,7 +33,7 @@ function Home() {
 </div></div>
 
     </div>
-    <Top />
+    {/* <Top /> */}
     </>
  
 )}

@@ -15,8 +15,8 @@ html,body{
   height: 10vh;
 display: flex;
 box-shadow:0px 2px 10px  rgba(0, 0, 0, 0.678);
-background-color:  rgba(153, 113, 39, 0.281);
-
+background-color:  white;
+color: black;
 font-weight:600 ;
 font-size: 16px;
 position: relative;
@@ -51,7 +51,7 @@ align-items: center;
 }
  a{
   text-decoration: none;
-  color:rgba(255, 255, 255, 0.61);
+  color:black;
   font-family:'Montserrat' ;
 }
 .home{
@@ -93,13 +93,13 @@ font-size: 22px;
 
 }
 .all{
-  padding: 10px 40px;
+  padding: 0px 0px;
 }
 .imag{
 
   position: relative;
   width: 100%;
-  height: 65vh;
+  height: 40vh;
 
 
 }
@@ -108,14 +108,24 @@ font-size: 22px;
   width: 100%;
 }
 .text{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
   position: absolute;
   left: 3%;
-  top: 24%;
+  top: 30%;
   color: white;}
+  .text h2{
+    font-size: 42px;
+    font-weight: 500;
+  }
 .text p{
   font-family: Montserrat;
 
-font-size: 18px;}
+font-size: 14px;
+font-weight: 600;}
 .overlay{
   position: absolute;
   left: 0;
@@ -128,18 +138,32 @@ font-size: 18px;}
 }
 .scroller{
   display: flex;
-  overflow-x: scroll;
+
+
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+
+  /* scroll-snap-type: x mandatory; F
+  scrollbar-width: none; */
 }
+.previous{
+position: absolute;
+top:5%;
+}
+
+
+
 .scroll-1 img{
   display: flex;
+  align-items: centr;
   /* flex-direction: row; */
   width: 200px;
   height: 200px;
 }
 
 .c{
- 
-  font-family: Montserrat;
+  font-family:'Montserrat';
   background-color: gray;
   padding: 24px 44px;
 }
@@ -159,7 +183,6 @@ line-height: 30px;
   font-size: 20px;
 }
 .abot{ 
-  height:80vh;
   padding: 20px 40px;
 font-family:'Montserrat';
 line-height: 30px;
@@ -175,17 +198,18 @@ color:darkslategrey
 .Produckte{
 
   display: grid;
-background-color:#393e46; ; ;
+/* gap: 20px; */
 padding: 0px 30px;
   font-family:'Montserrat' ;
-  grid-template-columns: 400px  400px 400px;
+  grid-template-columns: 330px  330px 320px;
   grid-template-rows: 500px 500px 500px 500px  ;
+  justify-content: center;
 }
 .pa p{
   color: white;
 }
 .child{
-  padding: 10px 20px;
+  padding: 10px 10px;
 }
 .child .img{
   display: flex;
@@ -271,7 +295,7 @@ cursor: pointer;
 color: white;
 }
 .headp{
-  height: 176px;
+  height: 210px;
 }
 .cart-container {
   position: relative;
@@ -336,23 +360,65 @@ color: white;}
 .home-btn{
   padding: 5px 15px;
 }
+.bestsell{
+  background-color: rgba(66, 116, 105, 0.838);
+  padding: 10px 0px;
+ 
+}
+.home_back{
+  background-color: rgba(66, 116, 105, 0.438);
+  padding: 10px 0px;
 
+}
+.grid{
+ display:grid;
+ grid-template-columns: 330px 330px 330px;
+ grid-template-rows: 500px 500px;
+ /* align-items: center; */
+ /* justify-content: center; */
+ padding: 40px 30px;
+ justify-content: center;
+}
 
+.best{
+  margin-bottom:20px ;
+}
 @media (max-width:900px){
   .Produckte{
-    width: 50%;
-    grid-template-columns: 300px  300px;
+    width: 100%;
+    grid-template-columns: 320px  320px;
     grid-template-rows: 500px 500px 500px 500px 500px ;
     font-size: 12px;
-    padding: 10px 80px;
+    padding: 10px 0px ;
   }.child{
-    padding: 0px 0px;
+    padding: 0px 10px;
 
   }
   .imag {
-    width: 610px;
+    /* width: 610px; */
     font-size: 8px;
 }
+.grid{
+  grid-template-columns: 280px 280px ;
+ }
+ .text{
+  left: 3%;
+  top: 25%;
+  }
+  .text h2{
+    font-size: 23px;
+  }
+  .text p{
+    font-size: 8px;
+    font-weight: 700;
+  }
+
+  .flex{
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+
+  }
 }
 @media (max-width:600px){
   .Produckte{
@@ -360,5 +426,35 @@ color: white;}
     grid-template-columns: 300px ;
     grid-template-rows: 500px 500px 500px 500px 500px ;
     font-size: 12px;
-    padding: 10px 70px;
-  }}
+  justify-content: center;
+  align-items: center;
+  }
+  .grid{
+
+    grid-template-columns: 300px;
+
+
+   }
+   .text{
+    left: 10%;
+    top: 5%;
+    }
+   .text h2{
+    font-size: 23px;
+  }
+  .text p{
+    font-size: 8px;
+    font-weight: 700;
+  }
+  .flex{
+    /* height: 50vh; */
+    display: flex;
+    flex-direction: column;
+
+  }
+  .c{
+
+    padding: 24px 0px;
+    /* text-align: center; */
+  }
+  }

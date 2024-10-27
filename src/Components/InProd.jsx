@@ -33,15 +33,15 @@ const InProd = () => {
 const dispatch =useDispatch()
   const navigate=useNavigate();
   console.log(products);
- const  handleAdd=(prodt)=>{
- return dispatch(add(prodt))
+//  const  handleAdd=(prodt)=>{
+//  return dispatch(add(prodt))
 
 
-}
+// }
   return (
     <div className='Produckte'>
       {products.map((elem,index)=>(
-   <div className='child' key={elem.id}><div className="img"><img src={elem.image} alt="" style={{height:'200px',width:'200px'}}/></div><div className="descrip"><div className="headp"><h4><a href="#">{elem.aa}</a></h4><div className='pa'><p>{elem.para}</p></div></div><div className='sp' style={{textAlign:'center',fontFamily:'Montserrat',fontSize:'20px',fontWeight:'700'}}><span >{elem.price}</span></div><div className="bton"><button  onClick={()=>{navigate(`/productpage/${elem.id}`)}}>View Detail</button><button onClick={()=>handleAdd(elem)}>Add to Cart</button></div></div></div>
+   <div className='child' key={elem.id}><div className="img"><img src={elem.image} alt="" style={{height:'200px',width:'200px'}}/></div><div className="descrip"><div className="headp"><h4><a href="#">{elem.aa}</a></h4><div className='pa'><p style={{color:'black'}}>{elem.para}</p></div></div><div className='sp' style={{textAlign:'center',fontFamily:'Montserrat',fontSize:'20px',fontWeight:'700'}}><span >{elem.price}</span></div><div className="bton"><button  onClick={()=>{navigate(`/productpage/${elem.id}`)}}>View Detail</button></div></div></div>
       ))}
  </div>
  )
