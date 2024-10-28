@@ -12,7 +12,7 @@ html,body{
   font-family:'Montserrat' ;
 }
 .menu{
-  height: 10vh;
+  /* height: 10vh; */
 display: flex;
 box-shadow:0px 2px 10px  rgba(0, 0, 0, 0.678);
 background-color:  white;
@@ -25,7 +25,8 @@ align-items: flex-end;
 justify-content: flex-end;
 
 }.logo{
-
+height: 10vh;
+width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -40,13 +41,21 @@ justify-content: flex-end;
   width: 22%;
 }
 .nav{
-  width:60% ;
-padding: 5px 20px;
-  display: flex;
+  height: 10vh;
+  width:50% ;
+padding: 5px 10px;
+  /* display: flex;
 justify-content: flex-end;
 justify-content: space-between;
-align-items: center;
+align-items: center; */
 /* align-items: flex-end; */
+
+}
+.full{
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
 
 }
  a{
@@ -54,6 +63,9 @@ align-items: center;
   color:black;
   font-family:'Montserrat' ;
 }
+/* .sidebar{
+  display: none;
+} */
 .home{
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.7);
@@ -115,7 +127,7 @@ font-size: 22px;
   justify-content: flex-start;
   position: absolute;
   left: 3%;
-  top: 30%;
+  top: 57%;
   color: white;}
   .text h2{
     font-size: 42px;
@@ -383,6 +395,12 @@ color: white;}
 .best{
   margin-bottom:20px ;
 }
+.sidebar{
+  display: none;
+}
+.ham{
+  display: none;
+}
 @media (max-width:900px){
   .Produckte{
     width: 100%;
@@ -403,7 +421,7 @@ color: white;}
  }
  .text{
   left: 3%;
-  top: 25%;
+  top: 63%;
   }
   .text h2{
     font-size: 23px;
@@ -419,15 +437,74 @@ color: white;}
     flex-direction: column;
 
   }
+
+  .full {
+display: none;
+}
+
+.nav{
+position:relative;
+z-index: 2;
+
+}
+.ham{
+  display: block;
+ 
+  position: absolute;
+  top: 35%;
+  left: 89%;
+}
+.sidebar{
+  display:block;
+  padding:0px 40px;
+  padding-top: 20px;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+background-color:white;
+position: fixed;
+bottom: 0;
+
+}
+.sidebar a{
+list-style: none;
+color: black;
+}
+.sidebar ul{
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sidebar ul li{
+  list-style: none;
+}
+.cart-container img{
+  height:25px;
+  width: 25px;
+}
+
+.cart-container{
+  position: absolute;
+right: 144%;
+  top: -17%;
+}
+.cart-value{
+  height: 12px;
+  width: 12px;
+}
 }
 @media (max-width:600px){
   .Produckte{
-    width: 50%;
+    width: 100%;
     grid-template-columns: 300px ;
     grid-template-rows: 500px 500px 500px 500px 500px ;
     font-size: 12px;
   justify-content: center;
   align-items: center;
+  }
+  .child{
+    margin-top: 20px;
   }
   .grid{
 
@@ -436,14 +513,14 @@ color: white;}
 
    }
    .text{
-    left: 10%;
-    top: 5%;
+    left: 3%;
+    top: 70%;
     }
    .text h2{
-    font-size: 23px;
+    font-size: 18px;
   }
   .text p{
-    font-size: 8px;
+    font-size: 7px;
     font-weight: 700;
   }
   .flex{
