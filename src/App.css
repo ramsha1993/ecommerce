@@ -12,7 +12,7 @@ html,body{
   font-family:'Montserrat' ;
 }
 .menu{
-  /* height: 10vh; */
+  height: 8vh;
 display: flex;
 box-shadow:0px 2px 10px  rgba(0, 0, 0, 0.678);
 background-color:  white;
@@ -25,7 +25,7 @@ align-items: flex-end;
 justify-content: flex-end;
 
 }.logo{
-height: 10vh;
+height: 6vh;
 width: 50%;
   display: flex;
   align-items: center;
@@ -34,14 +34,14 @@ width: 50%;
   /* left: 2%; */
   /* top: -12%; */
   /* width: 30%; */
-  height: 10vh;
+
 }
 
 .logo img{
   width: 22%;
 }
 .nav{
-  height: 10vh;
+  /* height: 10vh; */
   width:50% ;
 padding: 5px 10px;
   /* display: flex;
@@ -56,6 +56,7 @@ align-items: center; */
   justify-content: flex-end;
   justify-content: space-between;
   align-items: center;
+  padding-top: 17px;
 
 }
  a{
@@ -148,17 +149,15 @@ font-weight: 600;}
   color:white;
   z-index: -1;
 }
-.scroller{
-  display: flex;
 
-
-flex-wrap: wrap;
-align-items: center;
-justify-content: center;
-
+  .scroller {
+    display: grid;
+    grid-template-columns: 288px 288px 288px 288px;
+    grid-template-rows: 400px;
+    padding: 0px 74px;
+}
   /* scroll-snap-type: x mandatory; F
   scrollbar-width: none; */
-}
 .previous{
 position: absolute;
 top:5%;
@@ -168,10 +167,9 @@ top:5%;
 
 .scroll-1 img{
   display: flex;
-  align-items: centr;
+  align-items: center;
   /* flex-direction: row; */
-  width: 200px;
-  height: 200px;
+
 }
 
 .c{
@@ -213,7 +211,7 @@ color:darkslategrey
 /* gap: 20px; */
 padding: 0px 30px;
   font-family:'Montserrat' ;
-  grid-template-columns: 330px  330px 320px;
+  grid-template-columns: 360px  360px 360px;
   grid-template-rows: 500px 500px 500px 500px  ;
   justify-content: center;
 }
@@ -307,7 +305,7 @@ cursor: pointer;
 color: white;
 }
 .headp{
-  height: 210px;
+  height: 180px;
 }
 .cart-container {
   position: relative;
@@ -373,21 +371,43 @@ color: white;}
   padding: 5px 15px;
 }
 .bestsell{
-  background-color: rgba(66, 116, 105, 0.838);
-  padding: 10px 0px;
- 
+
+  padding: 10px 57px;
+ position: relative;
+}
+.underlie{
+  position:absolute ;
+  left: 70px;
+  top: 56px;
+  height: 2px;
+  width: 80px;
+  background-color:rgba(66, 116, 105, 0.838) ;
 }
 .home_back{
-  background-color: rgba(66, 116, 105, 0.438);
   padding: 10px 0px;
-
+position: relative;
+}
+.full a:hover{
+  color:rgba(66, 116, 105, 0.838) ; ;
+  }
+  .cart-container a img:hover{
+    background-color:rgba(66, 116, 105, 0.838) ; 
+    border-radius: 24px;
+    padding: 5px 5px;
+    }
+.underline{
+position: absolute;
+height: 2px;
+width: 80px;
+background-color:rgba(66, 116, 105, 0.838) ;
+left:95px;
+top: 58px;
 }
 .grid{
  display:grid;
- grid-template-columns: 330px 330px 330px;
- grid-template-rows: 500px 500px;
- /* align-items: center; */
- /* justify-content: center; */
+ grid-template-columns: 350px 350px 350px;
+ grid-template-rows: 550px 550px;
+ gap: 30px;
  padding: 40px 30px;
  justify-content: center;
 }
@@ -417,7 +437,7 @@ color: white;}
     font-size: 8px;
 }
 .grid{
-  grid-template-columns: 280px 280px ;
+  grid-template-columns:  280px 280px ;
  }
  .text{
   left: 3%;
@@ -451,7 +471,7 @@ z-index: 2;
   display: block;
  
   position: absolute;
-  top: 35%;
+  top: -139%;
   left: 89%;
 }
 .sidebar{
@@ -493,8 +513,32 @@ right: 144%;
   height: 12px;
   width: 12px;
 }
+.bestsell h3{
+  padding: 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@media (max-width:600px){
+.scroller {
+  grid-template-columns: 300px 300px  ;
+  grid-template-rows: 400px;
+
+}
+.home_back h3{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.underlie{
+  /* top:20px; */
+  bottom: 10%;
+  right: 0;
+  left: 35%;
+  bottom: 0;
+}
+
+}
+@media (max-width:700px){
   .Produckte{
     width: 100%;
     grid-template-columns: 300px ;
@@ -511,11 +555,27 @@ right: 144%;
     grid-template-columns: 300px;
 
 
-   }
-   .text{
+   }.scroller{
+  
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+   }.text{
     left: 3%;
     top: 70%;
     }
+    .home-btn h3{
+      padding-left: 0px;
+    }
+    .underlie{
+      /* top:20px; */
+      top:80%;
+      right: 0;
+      left: 32%;
+      bottom: 0;
+    }
+    
    .text h2{
     font-size: 18px;
   }
@@ -533,5 +593,9 @@ right: 144%;
 
     padding: 24px 0px;
     /* text-align: center; */
+  }
+  .bestsell h3{
+    padding: 20px 0px;
+    text-align: left;
   }
   }

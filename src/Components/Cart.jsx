@@ -2,6 +2,7 @@ import React, {useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { remove } from '../store/cartSlice';
 import { useDispatch } from 'react-redux';
+import  classes from './Cart.module.css'
 
 const Cart = () => {
 const [item,setitem] = useState([])
@@ -10,32 +11,33 @@ const [item,setitem] = useState([])
     const products=useSelector((state)=>state.cart)
 
 const updatelocalstorage=(items)=>{
-    console.log(items)
-let updateData=[];
-updateData=[...updateData,...items]
-// console.log(updateData)
-localStorage.setItem('data',JSON.stringify(updateData))
+
+localStorage.setItem('data',JSON.stringify(items))
 }
 
- useEffect(()=>{
-    if(products.length>0){
-        updatelocalstorage(products)
-   console.log(products)
+
+
+const handleRemove=(index)=>{
+ dispatch(remove({index}))
+//  console.log(products)
+//     const update=item.filter((__,idx)=>(idx !== index));
+// console.log(update)
+//      setitem(update)
+// updatelocalstorage(update)
     }
- },[products]) 
+    // on product change setitem and localstorage
+ useEffect(()=>{
+            if(products){
+                setitem(products)
+                updatelocalstorage(products)
+           console.log(products)
+            }
+         },[products]) 
 
-const handleRemove=(elem)=>{
-        dispatch(remove(elem))
-        console.log(elem)
-        const localData = JSON.parse(localStorage.getItem('data')) || [];
-        const updatedData = localData.filter((item) => item.aa !== elem.aa); // Assuming 'aa' is a unique identifier
-        localStorage.setItem('data', JSON.stringify(updatedData));
-        setitem(updatedData)
-        }
-
+// showing products from local storage on mount
 useEffect(()=>{
  const localdata=JSON.parse(localStorage.getItem('data'))
-if(localdata){
+if(localdata>0){
 try{
     
 setitem(localdata)}
@@ -46,28 +48,33 @@ console.log('Error',error)
 
 ,[])
 return (
-    <>
-      <div><h1 style={{ textAlign: 'center' }}>Cart</h1></div>
-      <div className="cart-wrapper">
+<div className={classes.container}>
+    <div>
+        <h1 className={classes.cartHeading}>Cart</h1> {/* Use the new class here */}
+    </div>
+    <div className={classes.cartWrapper}> {/* Ensure this uses the class from the module */}
         {item.length === 0 ? (
-          <p>Your cart is empty</p>
+            <p>Your cart is empty</p>
         ) : (
-          item.map((element, index) => (
-            <div className='cart-pro' key={index}>
-              <img
-                width='100px'
-                height='100px'
-                src={element.image || "/static/media/headphone.35744d1d7bc0b01d5a3d.jpg"}
-                alt="#"
-              />
-              <h5>{element.aa}</h5>
-              <h5 style={{ width: '100px' }}>{element.price}</h5>
-              <button className='but' onClick={() => handleRemove(element)}>Remove</button>
-            </div>
-          ))
+            item.map((element,index) => (
+                <div className='cart-pro' key={index}>
+{ console.log(index)}
+                    <img
+                        width='100px'
+                        height='100px'
+                        src={element.image || "/static/media/headphone.35744d1d7bc0b01d5a3d.jpg"}
+                        alt="#"
+                    />
+                    <h5>{element.aa}</h5>
+                    <h5 style={{ width: '100px' }}>{element.price}</h5>
+                    <button className='but' onClick={() => handleRemove(index)}>Remove</button>
+                </div>
+            ))
         )}
-      </div>
-    </>
+    </div>
+</div>
+
+
   );
 }
-export default Cart
+export default Cart;

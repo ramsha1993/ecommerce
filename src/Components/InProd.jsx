@@ -13,6 +13,10 @@ import hp from '../assets/hp.webp'
 import sm from '../assets/smart.webp'
 import { useNavigate } from 'react-router-dom';
 import { add } from '../store/cartSlice';
+import rename from '../assets/rename-1.jpg';
+import renam from '../assets/rename-3.jpg';
+import ren from '../assets/rename-4.jpg';
+import re from '../assets/rename-5.jpg';
 import { useDispatch } from 'react-redux';
 export const products=[{id:0,image:apple, aa:
   'Apple MacBook Air 15.3" Laptop | Apple M3 8-Core Chip | MRYN3 , Space Gray'
@@ -27,8 +31,9 @@ export const products=[{id:0,image:apple, aa:
       image:hp, aa:'Hp Chromebook 11 G6 EE | 4GB RAM DDR4 | 16GB SSD EMMC | Playstore supported | 11.6" screen - Daraz Like New Laptops', para:'Discover the HP Chromebook 11 G6 EE, a reliable and compact laptop designed for everyday tasks. With 4GB of DDR4 RAM and 16GB eMMC storage, it offers smooth performance. ', price:'Rs.50000'
     },{id:9,image:mouse, aa:'Bluetooth Mouse for APPle MacBook Air Pro Retina 11 12 13 15 16 mac book Laptop Wireless Mouse Rechargeable' ,para:'Enhance your productivity with our Bluetooth Mouse, designed specifically for Apple MacBook Air and Pro models (11", 12", 13", 15", and 16"). This wireless mouse offers' ,price:'Rs.20000'},{
       id:10,image:keyboard, aa:'HUO JI Compact Wireless Mechanical Keyboard: RGB Backlit Keyboard, Wired and Bluetooth 5.0,71-Key Layout,Blue Switches,Support Hot Swap Suitable for Office.',para:'Upgrade your typing experience with the HUO JI Compact Wireless Mechanical Keyboard.', price:'Rs.25000'
-    },{id:11, image:imac,aa:'Apple iMac MGPC3 8‑core CPU 8‑core GPU 8GB unified memory 256GB' ,para:'Experience stunning performance and design with the Apple iMac MGPC3, featuring an impressive 24-inch 4.5K Retina display that brings your content to life with vibrant colors and sharp details.',price:'Rs.7,40000'}];
-
+    },{id:11, image:imac,aa:'Apple iMac MGPC3 8‑core CPU 8‑core GPU 8GB unified memory 256GB' ,para:'Experience stunning performance and design with the Apple iMac MGPC3, featuring an impressive 24-inch 4.5K Retina display that brings your content to life with vibrant colors and sharp details.',price:'Rs.7,40000'},{id:12,image:rename,para:'Discover next-level gaming with our Ultra Series Wireless Gaming Headset, designed for immersive audio and maximum comfort. Equipped with noise-canceling technology.',aa:'"Elevate Your Game with the Ultra Series Wireless Gaming Headset',price:'Rs.50000'},
+  {id:13,image:renam,aa:'Stay Connected in Style with the Smart Fit Pro Watch',para:'Experience seamless connectivity and advanced fitness tracking with the Smart Fit Pro Watch. Designed for those who live life on the go, this sleek smartwatch lets you manage call',price:'RS.40000'},{id:14,image:ren,aa:'Experience Precision Control with the Elite Game Controller',para:'Designed for gamers who demand the best, the Elite Game Controller combines ergonomic comfort with high-performance features.',price:'Rs.20000'}
+,{id:14,image:re,aa:'Premium Headphones for Every Ear',para:'Experience sound like never before with our UltraComfort Wireless Headphones. Designed for audiophiles and casual listeners alike, ',price:'Rs.5000'}]
 const InProd = () => {
 const dispatch =useDispatch()
   const navigate=useNavigate();

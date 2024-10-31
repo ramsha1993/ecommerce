@@ -30,8 +30,8 @@ return setfirst({display:'block'})
    <Link to='/cart'>
    <img
          style={{position: "relative"}}
-         width="40px"
-         height="40px"
+         width="30px"
+         height="30px"
          src={cart}
          alt="#"
       />
