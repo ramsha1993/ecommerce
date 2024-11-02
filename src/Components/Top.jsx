@@ -1,30 +1,20 @@
 import React, { useState } from 'react'
-import prevs from '../assets/prev.png'
-import next from '../assets/next.png'
+// import prevs from '../assets/prev.png'
+// import next from '../assets/next.png'
 import bann from '../assets/next-ban.jpg'
 import ban from '../assets/bn.jpg'
 import banner from '../assets/banner-11.png'
-import baner from '../assets/baner-8.jpg'
-import apple from'../assets/apple lap.jpg'
-import head from '../assets/headphone.jpg'
-import iphonex from'../assets/iphonex.webp'
-import sm from '../assets/smart.webp'
-import smart from '../assets/smart watch.jpg'
-import imac from '../assets/imac.jpg'
-import keyboard from '../assets/keyboard.webp'
-import mouse from '../assets/mouse.webp'
-import gaming from '../assets/gamingpc.webp'
-import earpod from '../assets/earpod.webp'
-import ipad from '../assets/appleipad.webp'
-import hp from '../assets/hp.webp'
 import { useDispatch } from 'react-redux'
 import { add } from '../store/cartSlice';
 import Best from './Best'
 import { products } from './InProd'
-
-
-
-
+import Menu from './Menu'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLaptop } from '@fortawesome/free-solid-svg-icons';
+import { faMobileButton } from '@fortawesome/free-solid-svg-icons';
+import { faGamepad } from '@fortawesome/free-solid-svg-icons';
+import { faTv } from '@fortawesome/free-solid-svg-icons';
+import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 
 const Top = () => {
@@ -51,31 +41,42 @@ function handler(){
 
   const images=[ban,bann,banner]
 const btn1={
-background:`url(${prevs})`,
-backgroundRepeat:'no-repeat',
-height:'60px',
+  background:'none',
+height:'70px',
 width:'50px',
 border:'none',
 borderRadius:'30px',cursor:'pointer',
 position:'absolute',
 left: '0%',
-top: '120px'
+top: '150px'
 
 }
 const btn2={
-  background:`url(${next})`,
-  backgroundRepeat:'no-repeat',
+
+background:"none",
   height:'60px',
   width:'50px',
   border:'none',
   borderRadius:'30px',cursor:'pointer',
   position:'absolute',
-top: '120px',
+top: '150px',
 right:'0%'  }
 
   return (
     <div className='top'>
+{/* <Menu /> */}
 <div className='all'>
+  <div className='cat'>
+<div className="cateogies">
+<div className="one"><div className='icon'><FontAwesomeIcon icon={faLaptop} /></div><div><span>Laptops</span></div></div>
+<div className="two"><div className='icon'><FontAwesomeIcon icon={faMobileButton} /></div><div><span>Iphone</span></div></div>
+<div className="three"><div className='icon'><FontAwesomeIcon icon={faGamepad} /></div><div><span>Game Controller</span></div></div>
+<div className="four"><div className='icon'><FontAwesomeIcon icon={faTv} /></div><div><span>IMac</span></div></div>
+<div className="five"></div>
+<div className="six"></div>
+<div className="seven"></div>
+<dov className="eight"></dov>
+</div></div>
 <div className='imag'><img src={images[imge]} alt="#" 
 />
 <div className='text' ><h2>Buy Our lastest product </h2>
@@ -84,12 +85,12 @@ right:'0%'  }
  at half the price. Limited time only—shop now and save big!"</p>
  
  </div>
- <button className='prev' style={btn1} onClick={prevhandler}></button>
- <button className='next' style={btn2} onClick={handler}></button>
+ <button className='prev' style={btn1} onClick={prevhandler}><div><FontAwesomeIcon icon={faCaretLeft} /></div></button>
+ <button className='next' style={btn2} onClick={handler}><div><FontAwesomeIcon icon={faCaretRight} /></div></button>
 
- <div className="overlay">
+ {/* <div className="overlay">
  
-</div>
+</div> */}
 </div> 
 
 

@@ -21,27 +21,130 @@ font-weight:600 ;
 font-size: 16px;
 position: relative;
 display: flex;
-align-items: flex-end;
+align-items:center;
 justify-content: flex-end;
 
-}.logo{
-height: 6vh;
+}
+.cate{
+  display: flex;
+  text-align: start;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 50%;
+  padding: 10px 26px;
+}
+.sp{
+  width: 200px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family:'Montserrat';
+  text-align: start;
+}
+.sp span{    color: black;}
+.cat{
+  width: 20%;
+  height: 70vh;
+
+}
+.cateogies{
+
+  display: flex;
+  flex-direction: column;
+  /* font-size: 19px; */
+  align-items: flex-start;
+  font-family: 'Montserrat';
+  padding: 15px 30px;
+  gap: 22px;
+}
+.icon{
+  width: 50px;
+  text-align: start;
+}
+.one{
+display: flex;
+}
+.one span{
+  color: gray;
+  font-size: 12px;
+}
+.two{
+  display: flex;
+}
+.two span{  color: gray;
+  font-size: 12px;}
+  .three{
+    display: flex;
+  }
+.three span{  color: gray;
+  font-size: 12px;}
+  .four{
+    display: flex;
+  }
+.four span{  color: gray;
+  font-size: 12px;}
+.full a{
+  font-size:14px ;
+}
+.topbar{
+  height: 7vh;
+  display: flex;
+
+}
+
+.logo{
+  height: 100%;
 width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  text-align: center;
   /* position: absolute; */
   /* left: 2%; */
   /* top: -12%; */
   /* width: 30%; */
 
 }
-
+.logo{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 21%;
+}
 .logo img{
-  width: 22%;
+width: 200px;
+}
+.input{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.seach-logo  {    position: absolute;
+  top: 35%;
+  right: 95%;
+}
+svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
+  overflow: visible;
+  box-sizing: content-box;
+  color: gray;
+}
+input {
+  border:none;
+  border-radius: 37px;
+  border: 1px solid white;
+}
+input:focus{
+  outline:none;
+  border-color: rgb(205, 66, 56);
+}
+.input input {
+  padding: 10px 35px;
+width: 480px;
 }
 .nav{
   /* height: 10vh; */
+  height: 6vh;
   width:50% ;
 padding: 5px 10px;
   /* display: flex;
@@ -54,10 +157,15 @@ align-items: center; */
 .full{
   display: flex;
   justify-content: flex-end;
-  justify-content: space-between;
+  gap: 20px;
+  /* justify-content: space-between; */
   align-items: center;
   padding-top: 17px;
 
+}
+.full a{
+  font-size:14px ;
+  font-weight: 450;
 }
  a{
   text-decoration: none;
@@ -105,19 +213,19 @@ font-size: 22px;
 
 
 }
-.all{
-  padding: 0px 0px;
-}
+
+
+
 .imag{
 
   position: relative;
-  width: 100%;
-  height: 40vh;
+  width: 80%;
+  height: 70vh;
 
 
 }
 .imag img{
-  height:100%;
+  height: 63%;
   width: 100%;
 }
 .text{
@@ -128,27 +236,18 @@ font-size: 22px;
   justify-content: flex-start;
   position: absolute;
   left: 3%;
-  top: 57%;
+  top: 24%;
   color: white;}
   .text h2{
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 500;
   }
 .text p{
   font-family: Montserrat;
 
-font-size: 14px;
+font-size: 10px;
 font-weight: 600;}
-.overlay{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color:rgba(165, 42, 42, 0.5);
-  color:white;
-  z-index: -1;
-}
+
 
   .scroller {
     display: grid;
@@ -211,8 +310,8 @@ color:darkslategrey
 /* gap: 20px; */
 padding: 0px 30px;
   font-family:'Montserrat' ;
-  grid-template-columns: 360px  360px 360px;
-  grid-template-rows: 500px 500px 500px 500px  ;
+  grid-template-columns: 280px 280px 280px 280px;
+  grid-template-rows: 600px 600px 600px;
   justify-content: center;
 }
 .pa p{
@@ -220,6 +319,7 @@ padding: 0px 30px;
 }
 .child{
   padding: 10px 10px;
+  width: 200px;
 }
 .child .img{
   display: flex;
@@ -239,16 +339,19 @@ align-items: center;}
 
 
 .bton {
-text-align: center;
+  margin-top: 3px;
+  width: 200px;
+text-align: start;
 display: flex;
 gap: 20px;
 }
 .bton button{cursor: pointer;
   margin-top: 10px;
-  padding: 10px 20px;
+  padding: 8px 15px;
   border: none;
   border-radius: 5px;
   background-color :rgba(66, 116, 105, 0.838);
+  color: white;
 }
 
 
@@ -305,17 +408,32 @@ cursor: pointer;
 color: white;
 }
 .headp{
-  height: 180px;
+  height: 160px;
+  font-size: 13px;
+  width: 200px;
+  text-align: start;
 }
 .cart-container {
   position: relative;
   display: inline-block;
 }
-
+.top-half{
+  width: 33%;
+  display: flex;
+  text-align: end;
+  align-items:center;
+  justify-content: flex-end;
+}
+.cart{
+  /* width: 34%; */
+  position: relative;
+  display: inline-block;
+}
 .cart-value {
   position: absolute;
-  top: 4px;  /* Adjust vertically */
-  right: -2px;  /* Adjust horizontally */
+  z-index: -1;
+  top: 3px;
+  right: -3px; /* Adjust horizontally */
   height: 16px;
   width: 16px;
   font-size: 12px;
@@ -353,10 +471,9 @@ cursor: pointer;
 }
 .all{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-
+width: 100%;
 }
 
 
@@ -422,6 +539,52 @@ top: 58px;
   display: none;
 }
 @media (max-width:900px){
+  .logo img {
+    width: 120px;
+}
+  .seach-logo {
+    position: absolute;
+    top: 35%;
+    right: 90%;
+}
+  .input input {
+    padding: 10px 35px;
+    width: 200px;
+}
+.cateogies { padding: 15px 4px;}
+.text {
+  left: 3%;
+  top: 26%;
+
+}
+.text h2{
+  font-size: 20px;
+}
+.text p{
+  font-size: 6px;
+  font-weight: 400;
+}
+.imag img {
+  height: 46%;
+  width: 100%;
+}
+.icon {
+  width: 30px;
+  text-align: start;
+}
+.one span{
+  font-size: 9px;
+  
+}
+.two span{
+  font-size: 9px;
+}
+.three span{
+  font-size: 9px;
+}
+.four span{
+  font-size: 9px;
+}
   .Produckte{
     width: 100%;
     grid-template-columns: 320px  320px;
@@ -433,23 +596,18 @@ top: 58px;
 
   }
   .imag {
-    /* width: 610px; */
+    /* wi
+  dth: 610px; */
     font-size: 8px;
 }
 .grid{
   grid-template-columns:  280px 280px ;
  }
- .text{
+ /* .text{
   left: 3%;
   top: 63%;
-  }
-  .text h2{
-    font-size: 23px;
-  }
-  .text p{
-    font-size: 8px;
-    font-weight: 700;
-  }
+  } */
+ 
 
   .flex{
     /* height: 50vh; */
@@ -469,9 +627,9 @@ z-index: 2;
 }
 .ham{
   display: block;
- 
+
   position: absolute;
-  top: -139%;
+  top: 20%;
   left: 89%;
 }
 .sidebar{
@@ -562,9 +720,10 @@ justify-content: center;
   flex-direction: column;
   max-width: 100%;
    }.text{
-    left: 3%;
-    top: 70%;
+    left: 2%;
+    top: 30%;
     }
+  
     .home-btn h3{
       padding-left: 0px;
     }
@@ -577,11 +736,11 @@ justify-content: center;
     }
     
    .text h2{
-    font-size: 18px;
+    font-size: 10px;
   }
   .text p{
-    font-size: 7px;
-    font-weight: 700;
+    font-size: 4px;
+    font-weight: 300;
   }
   .flex{
     /* height: 50vh; */
