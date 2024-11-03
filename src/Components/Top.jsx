@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 // import prevs from '../assets/prev.png'
 // import next from '../assets/next.png'
 import bann from '../assets/next-ban.jpg'
@@ -7,7 +8,7 @@ import banner from '../assets/banner-11.png'
 import { useDispatch } from 'react-redux'
 import { add } from '../store/cartSlice';
 import Best from './Best'
-import { products } from './InProd'
+import InProd, { products } from './InProd'
 import Menu from './Menu'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLaptop } from '@fortawesome/free-solid-svg-icons';
@@ -15,8 +16,7 @@ import { faMobileButton } from '@fortawesome/free-solid-svg-icons';
 import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 import { faTv } from '@fortawesome/free-solid-svg-icons';
 import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
-
-
+import { Link } from 'react-router-dom'
 const Top = () => {
   const dispatch=useDispatch();
 const addhandLer=(cart_pro)=>{
@@ -61,14 +61,19 @@ background:"none",
   position:'absolute',
 top: '150px',
 right:'0%'  }
+const [Active, setActive] = useState(false)
+
+  const toggle=()=>{
+setActive(true)
+  }
 
   return (
     <div className='top'>
-{/* <Menu /> */}
+
 <div className='all'>
   <div className='cat'>
 <div className="cateogies">
-<div className="one"><div className='icon'><FontAwesomeIcon icon={faLaptop} /></div><div><span>Laptops</span></div></div>
+<div className="one"><div className='icon'><Link  to='/products' style={{cursor:'pointer'}}  onClick={()=>toggle()}><FontAwesomeIcon icon={faLaptop} /></Link></div><div><span>Laptops</span></div></div>
 <div className="two"><div className='icon'><FontAwesomeIcon icon={faMobileButton} /></div><div><span>Iphone</span></div></div>
 <div className="three"><div className='icon'><FontAwesomeIcon icon={faGamepad} /></div><div><span>Game Controller</span></div></div>
 <div className="four"><div className='icon'><FontAwesomeIcon icon={faTv} /></div><div><span>IMac</span></div></div>
@@ -88,9 +93,7 @@ right:'0%'  }
  <button className='prev' style={btn1} onClick={prevhandler}><div><FontAwesomeIcon icon={faCaretLeft} /></div></button>
  <button className='next' style={btn2} onClick={handler}><div><FontAwesomeIcon icon={faCaretRight} /></div></button>
 
- {/* <div className="overlay">
- 
-</div> */}
+
 </div> 
 
 
@@ -121,7 +124,6 @@ right:'0%'  }
   ))}
 </div></div>
     </div>
-
 
   )
 }
