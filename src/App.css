@@ -14,8 +14,8 @@ html,body{
 .menu{
   height: 8vh;
 display: flex;
-box-shadow:0px 2px 10px  rgba(0, 0, 0, 0.678);
-background-color:  white;
+box-shadow:0px 2px 4px  rgba(0, 0, 0, 0.678);
+background-color: #750016;
 color: black;
 font-weight:600 ;
 font-size: 16px;
@@ -26,21 +26,51 @@ justify-content: flex-end;
 
 }
 .cate{
+
   display: flex;
+  gap: 20px;
   text-align: start;
   align-items: flex-start;
   justify-content: flex-start;
   width: 50%;
   padding: 10px 26px;
 }
+
+
+.ham-2{
+  display: flex;
+  align-items:center;
+  cursor: pointer;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+    padding: 4px 4px;
+    background-color: #680808;
+    border-radius: 71px;
+}
+.sidebar-2{
+  position: relative;
+  height: 100vh;
+  width: 300px;
+position: fixed;
+bottom: 0%;
+left: 0;
+background-color:white ;
+z-index: 2;
+}
 .sp{
+  display: flex;
+  height: 25px;
   width: 200px;
-  font-size: 16px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-size: 23px;
   font-weight: 500;
-  font-family:'Montserrat';
+  font-family: 'Montserrat';
   text-align: start;
 }
-.sp span{    color: black;}
+.sp span{    color: black}
 .cat{
   width: 20%;
   height: 70vh;
@@ -64,30 +94,36 @@ justify-content: flex-end;
 display: flex;
 }
 .one span{
-  color: gray;
-  font-size: 12px;
+  font-weight: 400;
+  color: black;
+  font-size: 14px;
 }
 .two{
   display: flex;
 }
-.two span{  color: gray;
-  font-size: 12px;}
+.two span{   font-weight: 400;
+  color: black;
+  font-size: 14px;}
   .three{
     display: flex;
   }
-.three span{  color: gray;
-  font-size: 12px;}
+.three span{     font-weight: 400;
+  color: black;
+  font-size: 14px;}
   .four{
     display: flex;
   }
-.four span{  color: gray;
-  font-size: 12px;}
+.four span{   font-weight: 400;
+  color: black;
+  font-size: 14px;}
 .full a{
   font-size:14px ;
+  color: white;
 }
 .topbar{
   height: 7vh;
   display: flex;
+  background-color: #750016;
 
 }
 
@@ -219,7 +255,7 @@ font-size: 22px;
 .imag{
 
   position: relative;
-  width: 80%;
+  width: 100%;
   height: 70vh;
 
 
@@ -247,7 +283,12 @@ font-size: 22px;
 
 font-size: 10px;
 font-weight: 600;}
-
+.cross-pre{
+  position: absolute;
+  /* left: 232px; */
+  right: 0%;
+  top: -2px;
+}
 
   .scroller {
     display: grid;
@@ -408,7 +449,7 @@ cursor: pointer;
 color: white;
 }
 .headp{
-  height: 160px;
+  height: 169px;
   font-size: 13px;
   width: 200px;
   text-align: start;
@@ -531,6 +572,7 @@ top: 58px;
 
 .best{
   margin-bottom:20px ;
+  width: 223px;
 }
 .sidebar{
   display: none;
@@ -569,21 +611,27 @@ top: 58px;
   width: 100%;
 }
 .icon {
-  width: 30px;
+  width: 40px;
   text-align: start;
 }
+.catename{
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .one span{
-  font-size: 9px;
+  font-size: 12px;
   
 }
 .two span{
-  font-size: 9px;
+  font-size: 12px;
 }
 .three span{
-  font-size: 9px;
+  font-size:12px;
 }
 .four span{
-  font-size: 9px;
+  font-size: 12px;
 }
   .Produckte{
     width: 100%;
@@ -616,9 +664,6 @@ top: 58px;
 
   }
 
-  .full {
-display: none;
-}
 
 .nav{
 position:relative;
@@ -627,7 +672,6 @@ z-index: 2;
 }
 .ham{
   display: block;
-
   position: absolute;
   top: 20%;
   left: 89%;
@@ -694,7 +738,20 @@ justify-content: center;
   left: 35%;
   bottom: 0;
 }
-
+.main{
+  flex-direction: column;
+  height: 90vh;
+  padding: 20px 20px;
+}
+.image{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.des{
+  width: 100%;
+}
 }
 @media (max-width:700px){
   .Produckte{

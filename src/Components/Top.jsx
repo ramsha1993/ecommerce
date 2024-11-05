@@ -71,17 +71,7 @@ setActive(true)
     <div className='top'>
 
 <div className='all'>
-  <div className='cat'>
-<div className="cateogies">
-<div className="one"><div className='icon'><Link  to='/products' style={{cursor:'pointer'}}  onClick={()=>toggle()}><FontAwesomeIcon icon={faLaptop} /></Link></div><div><span>Laptops</span></div></div>
-<div className="two"><div className='icon'><FontAwesomeIcon icon={faMobileButton} /></div><div><span>Iphone</span></div></div>
-<div className="three"><div className='icon'><FontAwesomeIcon icon={faGamepad} /></div><div><span>Game Controller</span></div></div>
-<div className="four"><div className='icon'><FontAwesomeIcon icon={faTv} /></div><div><span>IMac</span></div></div>
-<div className="five"></div>
-<div className="six"></div>
-<div className="seven"></div>
-<dov className="eight"></dov>
-</div></div>
+
 <div className='imag'><img src={images[imge]} alt="#" 
 />
 <div className='text' ><h2>Buy Our lastest product </h2>

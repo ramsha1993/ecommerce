@@ -13,7 +13,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import hp from '../assets/hp.webp'
 import sm from '../assets/smart.webp'
-import { useNavigate } from 'react-router-dom';
 import { add } from '../store/cartSlice';
 import rename from '../assets/rename-1.jpg';
 import renam from '../assets/rename-3.jpg';
@@ -43,21 +42,20 @@ export const products=[{id:0,name:'laptop',image:apple, aa:
 
 
 
-const InProd = ({Active:initialActive}) => {
-  const [Active, setActive] = useState(initialActive||false)
+const InProd = () => {
   const dispatch=useDispatch();
-  const addtocart=(prodt)=>{
+
+const addtocart=(prodt)=>{
+
 return dispatch(add(prodt))
   }
 
   // Filter products by name if Active is true
-  const filteredProducts = Active
-    ? products.filter((product) => product.name === 'laptop') // Update 'laptop' to desired filter criteria
-    : products;
+   // Update 'laptop' to desired filter criteria
 
   return (
     <div className="Produckte">
-      {filteredProducts.map((elem) => (
+      {products.map((elem) => (
         <div className="child" key={elem.id}>
           <div className="img">
             <Link to={`/productpage/${elem.id}`}>
