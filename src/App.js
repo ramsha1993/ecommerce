@@ -19,12 +19,12 @@ function App() {
   <Topbar />
   <Menu />
   <Routes>
-<Route path='/' Component={Top}/> 
-<Route path='/about' Component={About}/>
-<Route path='/products' Component={InProd}/>
-<Route path='/productpage/:productId' Component={Productpage} />
+<Route path='/' element={<Top />}/> 
+<Route path='/about' element={<About />}/>
+<Route path='/products' element={<InProd />}/>
+<Route path='/productpage/:productId' element={<Productpage />} />
 
-<Route path='/cart' Component={Cart}/>
+<Route path='/cart' element={<Cart />}/>
 </Routes>
 <Footer />
  </Router>

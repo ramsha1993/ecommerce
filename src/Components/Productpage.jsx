@@ -18,7 +18,7 @@ const product=products.find((p)=>p.id === parseInt(productId))
 
 
   return (
-    <div  className='main' ><div className="image"><img width={'300px'} height={'300px'} src={product.image} alt="#" /></div><div className="des"><h1>{product.aa}</h1><p>{product.para}</p> <h4>{product.price}</h4><div >
+    <div  className='main' ><div className="image"><img  src={product.image} alt="#" /></div><div className="des"><h1>{product.aa}</h1><p>{product.para}</p> <h4>{product.price}</h4><div >
 <button className='bt' onClick={()=>addtocart(product)}>Add to Cart</button></div></div></div>
 
 )}

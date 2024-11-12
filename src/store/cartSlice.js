@@ -12,7 +12,7 @@ let initialState = catchdata;
            const updateData=[...exisitingdata,action.payload] 
             localStorage.setItem('data',JSON.stringify(updateData))
         },remove(state,action){
-             const newState=state.filter((__,idx) => idx !== action.payload.index)
+             const newState=state.filter((elem,idx) => elem.id !== action.payload.id)
             localStorage.setItem('data',JSON.stringify(newState))
             return newState
         }

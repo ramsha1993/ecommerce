@@ -2,11 +2,12 @@ import React, { useState } from 'react'
 
 // import prevs from '../assets/prev.png'
 // import next from '../assets/next.png'
-import bann from '../assets/next-ban.jpg'
-import ban from '../assets/bn.jpg'
-import banner from '../assets/banner-11.png'
+import bann from '../assets/baner.png'
+import banner from '../assets/phones.png'
+import game from '../assets/GAME-2 (2).png'
 import { useDispatch } from 'react-redux'
 import { add } from '../store/cartSlice';
+import { faStar, faStarHalfStroke } from '@fortawesome/free-solid-svg-icons';
 import Best from './Best'
 import InProd, { products } from './InProd'
 import Menu from './Menu'
@@ -16,8 +17,9 @@ import { faMobileButton } from '@fortawesome/free-solid-svg-icons';
 import { faGamepad } from '@fortawesome/free-solid-svg-icons';
 import { faTv } from '@fortawesome/free-solid-svg-icons';
 import { faCaretLeft, faCaretRight } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 const Top = () => {
+  const navigate=useNavigate();
   const dispatch=useDispatch();
 const addhandLer=(cart_pro)=>{
 return dispatch(add(cart_pro))
@@ -39,7 +41,7 @@ function handler(){
  else{return  setimge(imge+1)
 }}
 
-  const images=[ban,bann,banner]
+  const images=[bann,game,banner]
 const btn1={
   background:'none',
 height:'70px',
@@ -61,11 +63,6 @@ background:"none",
   position:'absolute',
 top: '150px',
 right:'0%'  }
-const [Active, setActive] = useState(false)
-
-  const toggle=()=>{
-setActive(true)
-  }
 
   return (
     <div className='top'>
@@ -74,14 +71,9 @@ setActive(true)
 
 <div className='imag'><img src={images[imge]} alt="#" 
 />
-<div className='text' ><h2>Buy Our lastest product </h2>
- <p>
- "50% OFF on Our Latest Products! 🎉 Grab the newest arrivals <br />
- at half the price. Limited time only—shop now and save big!"</p>
- 
- </div>
- <button className='prev' style={btn1} onClick={prevhandler}><div><FontAwesomeIcon icon={faCaretLeft} /></div></button>
- <button className='next' style={btn2} onClick={handler}><div><FontAwesomeIcon icon={faCaretRight} /></div></button>
+
+ <button className='prev'  onClick={prevhandler}><div><FontAwesomeIcon icon={faCaretLeft} /></div></button>
+ <button className='next'  onClick={handler}><div><FontAwesomeIcon icon={faCaretRight} /></div></button>
 
 
 </div> 
@@ -100,17 +92,19 @@ setActive(true)
 
 {products
   .filter((elem) => elem.id>11 )// Replace `someCondition` with your actual condition
-  .map((elem, index) => (
-    <div key={index} className="scroll-1">
-      <img src={elem.image} alt="" />
-      <div style={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center'}}>
-        <p style={{
+  .map((elem=> 
 
-  width:'160px',fontFamily: 'Montserrat',fontSize:'12px',color:'gray'
-        }}>{elem.aa}</p>
-        <h5 style={{ fontFamily: 'Montserrat', color: 'gray' }}>{elem.price}</h5>
-      </div> 
-    </div>
+
+      <div className='best'key={elem.id}><div className="img"><img src={elem.image} alt="#" /></div><div className="descrip"><div className="headp"><h4><a  href="#">{elem.aa}</a></h4> <div style={{ display: 'flex' }}>
+                      <FontAwesomeIcon style={{ color: 'orange' }} icon={faStar} />
+                      <FontAwesomeIcon style={{ color: 'orange' }} icon={faStar} />
+                      <FontAwesomeIcon style={{ color: 'orange' }} icon={faStar} />
+                      <FontAwesomeIcon style={{ color: 'orange' }} icon={faStar} />
+                      <FontAwesomeIcon style={{ color: 'orange' }} icon={faStarHalfStroke} />
+                    </div>
+                    <div ><p style={{fontFamily:'Montserrat',color:'black'}}>50+ has been sold out</p></div>
+                    <div><p style={{fontFamily:'Montserrat',color:'black'}}>Available only for Residents of Pakistan</p></div><div className="sp"><span>{elem.price}</span></div></div><div className="bton"><button  onClick={()=>{navigate(`/productpage/${elem.id}`)}}>View Detail</button></div></div></div>
+      
   ))}
 </div></div>
     </div>

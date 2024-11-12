@@ -12,7 +12,7 @@ const Best = () => {
         <div className="grid">
 {products.filter(elem => elem.id<5).map(elem=>(
 
-<div className='best'key={elem.id}><div className="img"><img src={elem.image} alt="#" style={{height:'250px',width:'250px'}}/></div><div className="descrip"><div className="headp"><h4><a style={{fontSize:'14px'}} href="#">{elem.aa}</a></h4> <div style={{ display: 'flex' }}>
+<div className='best'key={elem.id}><div className="img"><img src={elem.image} alt="#" /></div><div className="descrip"><div className="headp"><h4><a  href="#">{elem.aa}</a></h4> <div style={{ display: 'flex' }}>
                 <FontAwesomeIcon style={{ color: 'orange' }} icon={faStar} />
                 <FontAwesomeIcon style={{ color: 'orange' }} icon={faStar} />
                 <FontAwesomeIcon style={{ color: 'orange' }} icon={faStar} />
